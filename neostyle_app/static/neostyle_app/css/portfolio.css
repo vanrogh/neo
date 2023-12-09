@@ -1,0 +1,297 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Open Sans', Verdana, Arial, sans-serif;
+}
+
+#message {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: inline-block; /* Добавим это, чтобы блок занимал только необходимое пространство */
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    height: 200px;
+    z-index: 99;
+}
+
+/* HEADER */
+nav .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+nav .header .socials i {
+    font-size: 22px;
+    padding: 0 5px 0 5px;
+}
+
+nav .header .logo img {
+    width: 250px;
+}
+
+nav .header .location {
+    font-size: 13px;
+    line-height: 0px;
+}
+
+/* NAVBAR */
+nav .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1160px;
+    margin: 50px auto 10px auto;
+}
+
+nav .navbar li a {
+    padding: 0 50px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: .5s;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav .navbar li a:hover {
+    color: gold;
+    transition: .5s;
+}
+
+/* MAIN */
+main {
+    padding-top: 200px;
+    height: 900px;
+}
+
+
+.portfolio_menu {
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.portfolio_menu h1 {
+    padding-bottom: 50px;
+    font-family: 'Georgia', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.portfolio_menu .navbar2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1160px;
+    margin: 50px auto 10px auto;
+}
+
+.portfolio_menu .navbar2 li a {
+    padding: 0 50px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: .5s;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.portfolio_menu .navbar2 li a:hover {
+    color: gold;
+    transition: .5s;
+}
+
+/* FORTH_BLOCK */
+.forth_block  {
+    text-align: center;
+    background-image: url('../images/konsultacia.jpg');
+    background-size: cover; /* Масштабируем изображение, чтобы оно полностью покрывало задний план */
+    background-position: center;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.forth_block::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Затемненный цвет (черный с прозрачностью) */
+    z-index: 1; /* Чтобы псевдоэлемент находился выше фонового изображения */
+}
+
+.forth_block h1,
+.forth_block h2,
+.forth_block form {
+    position: relative;
+    z-index: 2; /* Чтобы контент находился над затемнением */
+}
+
+.forth_block h1 {
+    padding: 60px 0;
+    font-size: 48px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.forth_block h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    padding-bottom: 60px;
+}
+
+.forth_block form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.forth_block input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.forth_block button {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.forth_block button:hover {
+    opacity: 0.8;
+}
+
+/* FOOTER */
+footer {
+    background-color: #141414;
+    
+    padding: 134px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer div {
+    width: 760px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    text-align: center;
+}
+
+footer div a {
+    margin: 8px;
+    padding: 9px 18px;
+    background-color: #333;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 50px;
+    font-weight: 300;
+}
+
+
+/* GALLERY */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px; 
+  }
+  
+  .gallery img {
+    flex: 1 0 calc(25% - 5px); 
+    height: 285px; 
+    width: 380px;
+    object-fit: cover; 
+    margin: 0 0 0 0; 
+  }
+
+  .gallery img:hover {
+    transform: scale(1.1);
+  }
+
+  .fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen img {
+    max-width: 90%;
+    max-height: 90%;
+    position: relative;
+    z-index: 9999; /* Позиционируем изображение поверх других элементов */
+}
+
+/* #message {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+#message p {
+    margin: 0;
+} */
+
+/* Сообщение после отправки формы */
+#message {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: none;  
+}
+
+.success-message {
+    background-color: green;
+    color: white;
+    padding: 10px;
+}

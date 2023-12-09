@@ -1,0 +1,444 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Open Sans', Verdana, Arial, sans-serif;
+}
+
+#message {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: inline-block; 
+}
+/* body {
+    background-color: #000;
+} */
+
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    height: 200px;
+    z-index: 99;
+}
+
+/* HEADER */
+nav .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+nav .header .socials i {
+    font-size: 22px;
+    padding: 0 5px 0 5px;
+}
+
+nav .header .logo img {
+    width: 250px;
+}
+
+nav .header .location {
+    font-size: 13px;
+    line-height: 0px;
+}
+
+/* NAVBAR */
+nav .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1160px;
+    margin: 50px auto 10px auto;
+}
+
+nav .navbar li a {
+    padding: 0 50px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: .5s;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav .navbar li a:hover {
+    color: gold;
+    transition: .5s;
+}
+
+/* MAIN */
+main {
+    padding-top: 200px;
+    height: 900px;
+}
+
+/* FIRST_BLOCK */
+.first_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: url('../images/header.jpg'); 
+    background-size: cover;
+    background-position: center;
+    width: 100%; 
+    height: 100%;
+} 
+
+.first_block div {
+    width: 720px;
+    color: #fff;
+    text-align: center;
+}
+
+.first_block div h1 {
+    font-size: 48px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.first_block div h4 {
+    font-size: 20px;
+    font-weight: 300;
+    padding-bottom: 60px;
+}
+
+.first_block div a {
+    padding: 25px 60px;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: .5s;
+}
+
+.first_block div a:hover {
+    opacity: 0.7;
+    transition: .5s;
+}
+
+/* SECOND_BLOCK */
+.second_block {
+    /* background-color: #000; */
+    color: #fff;
+    width: 1200px;
+    margin: 100px auto 10px auto;
+    padding-bottom: 80px;
+}
+
+.second_block h1 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 600;
+    color: #000;
+}
+
+.second_block .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.second_block .container .wrapper {
+    display: flex;
+    align-items: center;
+    width: 600px; /* Ширина wrapper */
+    margin: 20px;
+    background-color: #333; /* Цвет фона wrapper */
+    border-radius: 10px; /* Скругленные углы */
+    overflow: hidden; /* Прячет выходящие за границы дочерние элементы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+.second_block .container .wrapper::before {
+    content: ""; /* Создаем псевдоэлемент для вставки фонового изображения */
+    width: 25%;
+    height: 100%;
+    margin-right: 15px;
+    background-size: cover; /* Растягиваем изображение для заполнения площади */
+    background-position: center; /* Центрируем изображение */
+}
+
+.second_block .container .wrapper img {
+    /* width: 25%;
+    height: 100%;
+    margin-right: 15px; */
+    display: none;
+}
+
+.second_block .container .wrapper:nth-child(1)::before {
+    background-image: url('../images/interior.jpg'); 
+}
+
+.second_block .container .wrapper:nth-child(2)::before {
+    background-image: url('../images/remont.jpg'); ;
+}
+
+.second_block .container .wrapper:nth-child(3)::before {
+    background-image: url('../images/project.jpg'); 
+}
+
+.second_block .container .wrapper:nth-child(4)::before {
+    background-image: url('../images/landshaft.jpg'); 
+}
+
+.second_block .container .wrapper .text {
+    flex: 1; /* Растягиваем текст на всю доступную ширину внутри wrapper */
+    padding: 20px; /* Отступы внутри wrapper */
+    text-align: left;
+}
+
+.second_block .container .wrapper .text h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.second_block .container .wrapper .text ul li {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+/* THIRD_BLOCK */
+.third_block {
+    height: 740px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/studio.jpg'); 
+    background-attachment: fixed; 
+    background-size: cover; 
+    background-position: center;
+}
+
+.third_block .about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 820px;
+    height: 440px;
+    text-align: center;
+}
+
+.third_block .about div {
+    width: 580px;
+    height: 280px;
+}
+
+.third_block .about div h1 {
+    font-size: 52px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+
+.third_block .about div p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 31px;
+}
+
+/* FORTH_BLOCK */
+.forth_block  {
+    text-align: center;
+    background-image: url('../images/konsultacia.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.forth_block::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 1; 
+}
+
+.forth_block h1,
+.forth_block h2,
+.forth_block form {
+    position: relative;
+    z-index: 2; 
+}
+
+.forth_block h1 {
+    padding: 60px 0;
+    font-size: 48px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.forth_block h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    padding-bottom: 60px;
+}
+
+.forth_block form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.forth_block input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.forth_block button {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.forth_block button:hover {
+    opacity: 0.8;
+}
+
+/* FOOTER */
+footer {
+    background-color: #141414;
+    
+    padding: 134px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer div {
+    width: 760px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    text-align: center;
+}
+
+footer div a {
+    margin: 8px;
+    padding: 9px 18px;
+    background-color: #333;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 50px;
+    font-weight: 300;
+}
+
+
+/* Сообщение после отправки формы */
+#message {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: none;  
+}
+
+.success-message {
+    background-color: green;
+    color: white;
+    padding: 10px;
+}
+
+
+/* employee_dashboard стили */
+.dashboard-header {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.dashboard-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.dashboard-item p {
+    margin: 0 0 10px;
+}
+
+.status-form {
+    display: flex;
+    align-items: center;
+}
+
+.status-select {
+    padding: 8px;
+    margin-right: 10px;
+}
+
+.status-button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.status-button:hover {
+    background-color: #45a049;
+}
+
+.delete-form {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; 
+}
+
+.delete-button {
+    background-color: #e53935;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #c62828;
+}

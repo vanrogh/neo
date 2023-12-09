@@ -1,0 +1,199 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoStyle</title>\
+    <link rel="stylesheet" href="{% static 'neostyle_app/css/portfolio.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Revalia&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="header">
+            <div class="socials">
+                <a href="tel:+7 708 106 44 53"><i class="fa fa-phone"></i></a>
+                <a href="https://t.me/neostyle_almaty"><i class="fab fa-telegram"></i></a>
+                <a href="https://api.whatsapp.com/send/?phone=77052072272&text&type=phone_number&app_absent=0"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/neostyle.kz/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@neostyle.kz"><i class="fab fa-tiktok"></i></a>
+            </div>
+
+            <div class="logo">
+                <img src="{% static 'neostyle_app/images/logo.png' %}" alt="Logo">
+
+            </div>
+
+            <div class="location">
+                <a href="https://2gis.kz/almaty/firm/70000001080475648">г. Алматы , Абая 151 , офис 104</a>
+            </div>
+        </div>
+
+        <ul class="navbar">
+            <li><a href="{% url 'index' %}">О Компании</a></li>
+            <li><a href="{% url 'index' %}">Услуги</a></li>
+            <li><a href="{% url 'portfolio' %}">Портфолио</a></li>
+            <li><a href="#a3">Стоимость</a></li>
+            <li><a href="#a4">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="gallery" id="gallery">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Неоклассика 10/1.jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Неоклассика 10/10(1).jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Неоклассика 10/10.jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Неоклассика 10/11.jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Неоклассика 10/14.jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Неоклассика 10/15.jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Неоклассика 10/16.jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Неоклассика 10/17.jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Неоклассика 10/19.jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Неоклассика 10/2.jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Неоклассика 10/22.jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Неоклассика 10/3(1).jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Папка 1/гостиная (1).jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Папка 1/гостиная (2).jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Папка 1/гостиная (3).jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Папка 1/гостиная (4).jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Папка 1/гостиная (5).jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Папка 1/зона отдыха (1).jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Папка 1/зона отдыха (2).jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Папка 1/зона отдыха (3).jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Папка 1/зона отдыха (4).jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Папка 1/зона отдыха (5).jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Папка 1/зона отдыха (6).jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Папка 1/холл (1).jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Папка 1/холл (4).jpg' %}">
+            <img src="{% static 'neostyle_app/images/Дизайн интерьера/Дизайн интерьера/Жилые интерьеры/Неоклассика/Папка 1/холл (5).jpg' %}">
+            <!-- <img src="">
+            <img src="">
+            <img src="">
+            <img src="">
+            <img src="">
+            <img src="">
+            <img src="">
+            <img src="">
+            <img src="">
+            <img src="">
+            <img src="">
+            <img src="">
+            <img src="">
+            <img src=""> -->
+        </div>
+            
+            <div id="a3" class="forth_block">
+                <h1>Оставляйте заявку на консультацию</h1>
+                <h2>И наши менеджеры перезвонят вам в ближайшее время!</h2>
+
+                <div id="message" class="success-message">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            
+                <form action="{% url 'portfolio' %}" method="post" id="contactForm">
+                    {% csrf_token %}
+                  
+                    <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+            
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" placeholder="Введите ваш номер телефона" required>
+            
+                    <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
+            
+                    <button type="submit">Отправить</button>
+                </form>
+                <script>
+                    $(document).ready(function() {
+                $("#contactForm").submit(function(event) {
+                    event.preventDefault();
+            
+                    $.ajax({
+                        type: "POST",
+                        url: "{% url 'index' %}",
+                        data: $(this).serialize(),
+                        success: function(response) {
+                            // Отображаем сообщение
+                            $("#message").html("<p>" + response.message + "</p>");
+            
+                            // Плавно показываем сообщение
+                            $("#message").fadeIn();
+            
+                            // Скрываем форму
+                            $("#contactForm").hide();
+            
+                            // Очистка полей формы 
+                            $("#contactForm")[0].reset();
+                        },
+                        error: function(error) {
+                            console.log("Error:", error);
+                        }
+                    });
+                });
+            });
+            
+                    </script>
+            </div>
+        
+        
+            <footer id="a4">
+                <div>
+                   <a href="{% url 'index' %}">Главная</a>
+                   <a href="{% url 'index' %}">О компании</a>
+                   <a href="{% url 'index' %}">Услуги</a>
+                   <a href="#a3">Стоимость</a>
+                   <a href="{% url 'portfolio' %}">Портфолио</a>
+                   <a href="#a4">Контакты</a>
+                   <a href="https://www.instagram.com/neostyle.kz/">Instagram</a>
+                   <a href="https://www.tiktok.com/@neostyle.kz">Tiktok</a>
+                   <a href="https://api.whatsapp.com/message/TBQVAOMOPTBDL1?autoload=1&app_absent=0">WhatsApp</a>
+                   <a href="https://t.me/neostyle_almaty">Telegram</a>
+                   <a href="tel:+7 708 106 44 53">+7 708 106 44 53</a>
+                   <a href="https://2gis.kz/almaty/firm/70000001080475648">2ГИС</a>
+                   <a href="https://2gis.kz/almaty/firm/70000001080475648">Адрес</a>
+                </div>
+            </footer>
+        
+    </main>
+    <script>
+        // Получаем все изображения и галерею
+const images = document.querySelectorAll('.gallery img');
+const gallery = document.getElementById('gallery');
+
+// Добавляем обработчик клика на каждое изображение
+images.forEach(image => {
+    image.addEventListener('click', () => {
+        // Создаем элемент для полноэкранного просмотра
+        const fullscreenView = document.createElement('div');
+        fullscreenView.classList.add('fullscreen');
+
+        // Создаем изображение и добавляем его в полноэкранный режим
+        const fullscreenImage = new Image();
+        fullscreenImage.src = image.src;
+        fullscreenView.appendChild(fullscreenImage);
+
+        // Добавляем полноэкранный режим к body
+        document.body.appendChild(fullscreenView);
+
+        // Добавляем обработчик клика для закрытия полноэкранного режима
+        fullscreenView.addEventListener('click', () => {
+            fullscreenView.remove();
+        });
+    });
+});
+
+
+
+    </script>
+
+    
+    
+</body>
+</html>

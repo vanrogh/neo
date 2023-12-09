@@ -1,0 +1,92 @@
+<!-- Ваш шаблон, например, neostyle_app/templates/neostyle_app/employee_dashboard.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoStyle</title>
+    <link rel="stylesheet" href="{% static 'neostyle_app/css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Revalia&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="header">
+            <div class="socials">
+                <a href="tel:+7 708 106 44 53"><i class="fa fa-phone"></i></a>
+                <a href="https://t.me/neostyle_almaty"><i class="fab fa-telegram"></i></a>
+                <a href="https://api.whatsapp.com/send/?phone=77052072272&text&type=phone_number&app_absent=0"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/neostyle.kz/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@neostyle.kz"><i class="fab fa-tiktok"></i></a>
+            </div>
+
+            <div class="logo">
+                <img src="{% static 'neostyle_app/images/logo.png' %}" alt="Logo">
+
+            </div>
+
+            <div class="location">
+                <a href="https://2gis.kz/almaty/firm/70000001080475648">г. Алматы , Абая 151 , офис 104</a>
+            </div>
+        </div>
+
+        <ul class="navbar">
+            <li><a href="{% url 'index' %}">О Компании</a></li>
+            <li><a href="{% url 'index' %}">Услуги</a></li>
+            <li><a href="{% url 'portfolio' %}">Портфолио</a></li>
+            <li><a href="{% url 'index' %}">Стоимость</a></li>
+            <li><a href="{% url 'index' %}">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1 class="dashboard-header">Добро пожаловать, {{ user.username }}!</h1>
+        {% for request in requests %}
+        <div class="dashboard-item">
+            <p>{{ request.name }}</p>
+            <p>{{ request.phone }}</p>
+            <p>{{ request.email }}</p>
+            <p>Статус заявки: {{ request.get_status_display }}</p>
+            
+            <form class="status-form" action="{% url 'change_status' request.id %}" method="post">
+                {% csrf_token %}
+                <select class="status-select" name="status">
+                    <option value="1" {% if request.status == 1 %}selected{% endif %}>Ожидание</option>
+                    <option value="2" {% if request.status == 2 %}selected{% endif %}>В процессе</option>
+                    <option value="3" {% if request.status == 3 %}selected{% endif %}>Выполнено</option>
+                </select>
+                <button class="status-button" type="submit">Изменить статус</button>
+            </form>
+    
+            <form class="delete-form" action="{% url 'delete_request' request.id %}" method="post">
+                {% csrf_token %}
+                <button class="delete-button" type="submit">Удалить заявку</button>
+            </form>
+        </div>
+    {% endfor %}
+
+    <footer id="a4">
+        <div>
+           <a href="{% url 'index' %}">Главная</a>
+           <a href="#a1">О компании</a>
+           <a href="#a2">Услуги</a>
+           <a href="#a3">Стоимость</a>
+           <a href="{% url 'portfolio' %}">Портфолио</a>
+           <a href="#a4">Контакты</a>
+           <a href="https://www.instagram.com/neostyle.kz/">Instagram</a>
+           <a href="https://www.tiktok.com/@neostyle.kz">Tiktok</a>
+           <a href="https://api.whatsapp.com/message/TBQVAOMOPTBDL1?autoload=1&app_absent=0">WhatsApp</a>
+           <a href="https://t.me/neostyle_almaty">Telegram</a>
+           <a href="tel:+7 708 106 44 53">+7 708 106 44 53</a>
+           <a href="https://2gis.kz/almaty/firm/70000001080475648">2ГИС</a>
+           <a href="https://2gis.kz/almaty/firm/70000001080475648">Адрес</a>
+        </div>
+    </footer>
+    </main>
+    
+</body>
+</html>
