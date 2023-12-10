@@ -14,7 +14,6 @@ urlpatterns = [
     path('login/', LoginView.as_view(template_name='neostyle_app/login.html'), name='login'),
 
     path('accounts/profile/', employee_dashboard, name='employee_dashboard'),
-    path('employee_dashboard/', employee_dashboard, name='employee_dashboard'),
     path('change_status/<int:request_id>/', change_status, name='change_status'),
     path('delete_request/<int:request_id>/', delete_request, name='delete_request'),
 ]

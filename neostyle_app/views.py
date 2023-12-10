@@ -7,6 +7,7 @@ from django.contrib import messages
 from django.http import JsonResponse
 from django.core.mail import send_mail
 from django.conf import settings
+from .telegram_utils import send_telegram_notification
 
 
 def index(request):
@@ -23,6 +24,12 @@ def index(request):
             #     ['moonexsoftaim@mail.ru'],  # Получатель
             #     fail_silently=False,
             # )
+            # Отправка уведомления в телеграм
+            send_telegram_notification(
+                name=form.cleaned_data.get('name', ''),
+                phone=form.cleaned_data.get('phone', ''),
+                email=form.cleaned_data.get('email', ''),
+            )
             return JsonResponse({'message': 'Ваша заявка принята, с вами свяжутся в ближайшее время.'})
 
     return render(request, 'neostyle_app/index.html', {'form': form})
@@ -34,6 +41,12 @@ def architecture(request):
         form = RequestForm(request.POST)
         if form.is_valid():
             form.save()
+
+            send_telegram_notification(
+                name=form.cleaned_data.get('name', ''),
+                phone=form.cleaned_data.get('phone', ''),
+                email=form.cleaned_data.get('email', ''),
+            )
             return JsonResponse({'message': 'Ваша заявка принята, с вами свяжутся в ближайшее время.'})
 
     return render(request, 'neostyle_app/architecture.html', {'form': form})
@@ -45,9 +58,16 @@ def comerc_interior(request):
         form = RequestForm(request.POST)
         if form.is_valid():
             form.save()
+
+            send_telegram_notification(
+                name=form.cleaned_data.get('name', ''),
+                phone=form.cleaned_data.get('phone', ''),
+                email=form.cleaned_data.get('email', ''),
+            )
             return JsonResponse({'message': 'Ваша заявка принята, с вами свяжутся в ближайшее время.'})
 
     return render(request, 'neostyle_app/comerc-interior.html', {'form': form})
+
 
 def interior_design(request):
     form = RequestForm()
@@ -56,6 +76,12 @@ def interior_design(request):
         form = RequestForm(request.POST)
         if form.is_valid():
             form.save()
+
+            send_telegram_notification(
+                name=form.cleaned_data.get('name', ''),
+                phone=form.cleaned_data.get('phone', ''),
+                email=form.cleaned_data.get('email', ''),
+            )
             return JsonResponse({'message': 'Ваша заявка принята, с вами свяжутся в ближайшее время.'})
 
     return render(request, 'neostyle_app/interior-design.html', {'form': form})
@@ -67,6 +93,12 @@ def portfolio(request):
         form = RequestForm(request.POST)
         if form.is_valid():
             form.save()
+
+            send_telegram_notification(
+                name=form.cleaned_data.get('name', ''),
+                phone=form.cleaned_data.get('phone', ''),
+                email=form.cleaned_data.get('email', ''),
+            )
             return JsonResponse({'message': 'Ваша заявка принята, с вами свяжутся в ближайшее время.'})
 
     return render(request, 'neostyle_app/portfolio.html', {'form': form})
