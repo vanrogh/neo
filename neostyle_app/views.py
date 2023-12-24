@@ -7,7 +7,7 @@ from django.contrib import messages
 from django.http import JsonResponse
 from django.core.mail import send_mail
 from django.conf import settings
-from .telegram_utils import send_telegram_notification
+from neostyle_app.management.commands.run_telegram_bot import Command
 
 
 def index(request):
@@ -25,7 +25,7 @@ def index(request):
             #     fail_silently=False,
             # )
             # Отправка уведомления в телеграм
-            send_telegram_notification(
+            Command.send_telegram_notification(
                 name=form.cleaned_data.get('name', ''),
                 phone=form.cleaned_data.get('phone', ''),
                 email=form.cleaned_data.get('email', ''),
@@ -42,7 +42,7 @@ def architecture(request):
         if form.is_valid():
             form.save()
 
-            send_telegram_notification(
+            Command.send_telegram_notification(
                 name=form.cleaned_data.get('name', ''),
                 phone=form.cleaned_data.get('phone', ''),
                 email=form.cleaned_data.get('email', ''),
@@ -59,7 +59,7 @@ def comerc_interior(request):
         if form.is_valid():
             form.save()
 
-            send_telegram_notification(
+            Command.send_telegram_notification(
                 name=form.cleaned_data.get('name', ''),
                 phone=form.cleaned_data.get('phone', ''),
                 email=form.cleaned_data.get('email', ''),
@@ -77,7 +77,7 @@ def interior_design(request):
         if form.is_valid():
             form.save()
 
-            send_telegram_notification(
+            Command.send_telegram_notification(
                 name=form.cleaned_data.get('name', ''),
                 phone=form.cleaned_data.get('phone', ''),
                 email=form.cleaned_data.get('email', ''),
@@ -94,7 +94,7 @@ def portfolio(request):
         if form.is_valid():
             form.save()
 
-            send_telegram_notification(
+            Command.send_telegram_notification(
                 name=form.cleaned_data.get('name', ''),
                 phone=form.cleaned_data.get('phone', ''),
                 email=form.cleaned_data.get('email', ''),
